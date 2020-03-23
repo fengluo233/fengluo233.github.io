@@ -17,15 +17,15 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="这篇文章我总结了一下我安装 Ubuntu 虚拟机的全过程">
+  <meta name="description" content="这篇文章我总结了一下我安装 Ubuntu 虚拟机编译 Linux 内核的全过程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在 VMware 虚拟机中使用 Ubuntu 18.04 系统编译 Linux 内核问题与方法总结">
 <meta property="og:url" content="http://yoursite.com/2020/03/23/%E5%9C%A8-VMware-%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E4%BD%BF%E7%94%A8-Ubuntu-18-04-%E7%B3%BB%E7%BB%9F%E7%BC%96%E8%AF%91-Linux-%E5%86%85%E6%A0%B8%E9%97%AE%E9%A2%98%E4%B8%8E%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="这篇文章我总结了一下我安装 Ubuntu 虚拟机的全过程">
+<meta property="og:description" content="这篇文章我总结了一下我安装 Ubuntu 虚拟机编译 Linux 内核的全过程">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200307231525248.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk2MDEzNA==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200307231619196.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk2MDEzNA==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200307231744686.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk2MDEzNA==,size_16,color_FFFFFF,t_70">
@@ -60,8 +60,8 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200308000546199.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk2MDEzNA==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200308000603482.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk2MDEzNA==,size_16,color_FFFFFF,t_70">
 <meta property="article:published_time" content="2020-03-23T06:05:01.000Z">
-<meta property="article:modified_time" content="2020-03-23T06:25:17.497Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2020-03-23T06:30:05.741Z">
+<meta property="article:author" content="fengluo">
 <meta property="article:tag" content="Ubuntu">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="编译">
@@ -153,6 +153,11 @@
     <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
   </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
@@ -188,7 +193,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="fengluo">
       <meta itemprop="description" content="">
     </span>
 
@@ -208,7 +213,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-03-23 14:05:01 / 修改时间：14:25:17" itemprop="dateCreated datePublished" datetime="2020-03-23T14:05:01+08:00">2020-03-23</time>
+              <time title="创建时间：2020-03-23 14:05:01 / 修改时间：14:30:05" itemprop="dateCreated datePublished" datetime="2020-03-23T14:05:01+08:00">2020-03-23</time>
             </span>
 
           
@@ -222,7 +227,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>这篇文章我总结了一下我安装 Ubuntu 虚拟机的全过程</p>
+        <p>这篇文章我总结了一下我安装 Ubuntu 虚拟机编译 Linux 内核的全过程</p>
 <a id="more"></a>
 <p><img src="https://img-blog.csdnimg.cn/20200307231525248.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk2MDEzNA==,size_16,color_FFFFFF,t_70" alt="新建虚拟机向导"><br>首先进入新建虚拟机向导页面，选择自定义，然后下一步<br><img src="https://img-blog.csdnimg.cn/20200307231619196.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk2MDEzNA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>我们在这里并不安装程序光盘映像文件，而是选择稍后安装操作系统，这里可以进行一些设置<br><img src="https://img-blog.csdnimg.cn/20200307231744686.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk2MDEzNA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选中 Linux，我们以 Ubuntu 64位为例<br><img src="https://img-blog.csdnimg.cn/20200307231836434.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk2MDEzNA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这里的位置根据自己的需求选择，博主C盘空间不够所以选择了D盘<br><img src="https://img-blog.csdnimg.cn/2020030723211899.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk2MDEzNA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>在这里的选择我们可以参考VMware官方给出的方法：<br><img src="https://img-blog.csdnimg.cn/20200307232207643.png" alt="在这里插入图片描述"><br>在某些情况下，添加额外的处理器可能会降低虚拟机和计算机的整体性能。如果操作系统或应用程序未高效使用处理器，将计算机上的所有处理器都分配给虚拟机会导致性能显著下降。<br><img src="https://img-blog.csdnimg.cn/2020030723245027.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk2MDEzNA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这里主要根据电脑内存的大小进行选择。博主电脑内存大小为16GB，此处分配4GB。<br><img src="https://img-blog.csdnimg.cn/20200307232742531.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk2MDEzNA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>如果没有可用于虚拟机的单独 IP 地址，请选择 NAT<br><img src="https://img-blog.csdnimg.cn/20200307233306485.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk2MDEzNA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200307233339905.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk2MDEzNA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200307233716663.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk2MDEzNA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200307233733577.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk2MDEzNA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>如果是要编译 Linux 内核，那么 20GB 是绝对不够用的，建议分出 60GB<br><img src="https://img-blog.csdnimg.cn/20200307233840229.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk2MDEzNA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200307233851865.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk2MDEzNA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>然后点击完成就新建好啦<br><img src="https://img-blog.csdnimg.cn/20200307233953401.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk2MDEzNA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>接下来点击【编辑虚拟机设置】<br><img src="https://img-blog.csdnimg.cn/20200307234032249.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk2MDEzNA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>CD/DVD 选择使用ISO映像文件，然后选择你下载的 Ubuntu 镜像文件<br><img src="https://img-blog.csdnimg.cn/20200307234235962.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk2MDEzNA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>设置好之后就可以点击【开启此虚拟机】，接下来就是正常的安装Ubuntu系统的操作，在这里不再赘述<br><img src="https://img-blog.csdnimg.cn/20200307234447148.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk2MDEzNA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>安装好之后使用 VMware Tool 工具将 Linux 内核拖进来或者在里边下载也可<br><img src="https://img-blog.csdnimg.cn/20200307234618624.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk2MDEzNA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>接下来将内核文件解压到一个文件夹中<br><img src="https://img-blog.csdnimg.cn/20200307234657145.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk2MDEzNA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>打开终端，使用<code>cd</code>命令进入到解压好的文件夹中，然后运行下面的命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libncurses5-dev libssl-dev </span><br><span class="line"></span><br><span class="line">sudo apt-get install build-essential openssl </span><br><span class="line"></span><br><span class="line">sudo apt-get install zlibc minizip </span><br><span class="line"></span><br><span class="line">sudo apt-get install libidn11-dev libidn11</span><br></pre></td></tr></table></figure>
@@ -322,7 +327,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">John Doe</p>
+  <p class="site-author-name" itemprop="name">fengluo</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -336,6 +341,7 @@
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
+          
         <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
@@ -365,12 +371,12 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">fengluo</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
   </div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.7.2
+  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.7.2
   </div>
 
         
@@ -396,7 +402,7 @@
 <script src="/js/motion.js"></script>
 
 
-<script src="/js/schemes/muse.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
 <script src="/js/next-boot.js"></script>
