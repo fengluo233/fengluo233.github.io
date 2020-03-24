@@ -453,12 +453,12 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
     });
     new Valine({
       el         : '#valine-comments',
-      verify     : false,
+      verify     : true,
       notify     : false,
       appId      : 'j8dD7NHhe2uprevJhiVtWedG-gzGzoHsz',
       appKey     : 'lJJHmHk40KgC9UPNbb72wMAt',
       placeholder: "畅所欲言吧（反正是匿名",
-      avatar     : 'mm',
+      avatar     : 'identicon',
       meta       : guest,
       pageSize   : '10' || 10,
       visitor    : true,
