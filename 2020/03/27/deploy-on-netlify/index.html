@@ -21,19 +21,25 @@
     var CONFIG = {"hostname":"haoshuang.site","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="最近买了个256G的SSD换到电脑上">
+  <meta name="description" content="为了解决部分情况下访问慢的问题，增加解析到 Netlify">
 <meta property="og:type" content="article">
-<meta property="og:title" content="换固态硬盘">
-<meta property="og:url" content="https://haoshuang.site/2020/03/23/%E6%8D%A2%E5%9B%BA%E6%80%81%E7%A1%AC%E7%9B%98/index.html">
+<meta property="og:title" content="将 hexo 博客同时部署到 Netlify 与 GitHub Pages">
+<meta property="og:url" content="https://haoshuang.site/2020/03/27/deploy-on-netlify/index.html">
 <meta property="og:site_name" content="枫落">
-<meta property="og:description" content="最近买了个256G的SSD换到电脑上">
-<meta property="article:published_time" content="2020-03-23T07:24:20.000Z">
-<meta property="article:modified_time" content="2020-03-25T17:45:28.306Z">
+<meta property="og:description" content="为了解决部分情况下访问慢的问题，增加解析到 Netlify">
+<meta property="og:image" content="https://s1.ax1x.com/2020/03/27/GiUkoq.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2020/03/27/GiaHUI.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2020/03/27/GidExU.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2020/03/27/GiwFwd.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2020/03/27/Giw8kn.jpg">
+<meta property="article:published_time" content="2020-03-27T12:12:25.000Z">
+<meta property="article:modified_time" content="2020-03-27T13:20:39.835Z">
 <meta property="article:author" content="fengluo">
-<meta property="article:tag" content="生活">
+<meta property="article:tag" content="博客">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/03/27/GiUkoq.jpg">
 
-<link rel="canonical" href="https://haoshuang.site/2020/03/23/%E6%8D%A2%E5%9B%BA%E6%80%81%E7%A1%AC%E7%9B%98/">
+<link rel="canonical" href="https://haoshuang.site/2020/03/27/deploy-on-netlify/">
 
 
 <script id="page-configurations">
@@ -45,7 +51,7 @@
   };
 </script>
 
-  <title>换固态硬盘 | 枫落</title>
+  <title>将 hexo 博客同时部署到 Netlify 与 GitHub Pages | 枫落</title>
   
 
 
@@ -161,7 +167,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="https://haoshuang.site/2020/03/23/%E6%8D%A2%E5%9B%BA%E6%80%81%E7%A1%AC%E7%9B%98/">
+    <link itemprop="mainEntityOfPage" href="https://haoshuang.site/2020/03/27/deploy-on-netlify/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -174,7 +180,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          换固态硬盘
+          将 hexo 博客同时部署到 Netlify 与 GitHub Pages
         </h1>
 
         <div class="post-meta">
@@ -183,19 +189,13 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-03-23 15:24:20" itemprop="dateCreated datePublished" datetime="2020-03-23T15:24:20+08:00">2020-03-23</time>
+              <time title="创建时间：2020-03-27 20:12:25 / 修改时间：21:20:39" itemprop="dateCreated datePublished" datetime="2020-03-27T20:12:25+08:00">2020-03-27</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-26 01:45:28" itemprop="dateModified" datetime="2020-03-26T01:45:28+08:00">2020-03-26</time>
-              </span>
 
           
-            <span id="/2020/03/23/%E6%8D%A2%E5%9B%BA%E6%80%81%E7%A1%AC%E7%9B%98/" class="post-meta-item leancloud_visitors" data-flag-title="换固态硬盘" title="阅读次数">
+            <span id="/2020/03/27/deploy-on-netlify/" class="post-meta-item leancloud_visitors" data-flag-title="将 hexo 博客同时部署到 Netlify 与 GitHub Pages" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -210,8 +210,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/03/23/%E6%8D%A2%E5%9B%BA%E6%80%81%E7%A1%AC%E7%9B%98/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/03/23/%E6%8D%A2%E5%9B%BA%E6%80%81%E7%A1%AC%E7%9B%98/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/03/27/deploy-on-netlify/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/03/27/deploy-on-netlify/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -226,10 +226,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>最近买了个256G的SSD换到电脑上</p>
-<a id="more"></a>
-
-<p>西数的盘还行，读取上1400MB/S了，写也能到800MB/S，官网查了查没有翻车，成功上岸</p>
+        <p>为了解决部分情况下访问慢的问题，增加解析到 Netlify<a id="more"></a>，从而对访问进行加速。</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在使用的时候我发现有时候当网络情况差或者其他玄学原因的时候，博客的访问会变得非常之慢<del>pia的一声把锅甩给GitHub</del>,本来想试着做做负载均衡，一看要租用少说三个服务器就望而却步，最后还是决定使用 netfliy，毕竟他在国内的访问速度还是比较快的。</p>
+<h2 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h2><h3 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h3><p>netlify 很好注册，打开他的<a href="https://www.netlify.com/" target="_blank" rel="noopener">官网</a>，可以选择使用多种方式，这里使用 GitHub 登录进行举例，其他操作类似。</p>
+<p><img src="https://s1.ax1x.com/2020/03/27/GiUkoq.jpg" alt="注册"></p>
+<h3 id="新建"><a href="#新建" class="headerlink" title="新建"></a>新建</h3><p>接下来进入到这个界面，点击 New site form Git</p>
+<p><img src="https://s1.ax1x.com/2020/03/27/GiaHUI.jpg" alt="new site"></p>
+<p>然后点击 GitHub</p>
+<p><img src="https://s1.ax1x.com/2020/03/27/GidExU.jpg" alt="add"></p>
+<h3 id="选择仓库"><a href="#选择仓库" class="headerlink" title="选择仓库"></a>选择仓库</h3><p>接下来会进入认证界面，正常认证进入，然后选择你的博客所在的仓库。这里如果你已经在GitHub Pages 上部署了，这里就直接选择你部署的那个仓库，如果你还没有部署，建议先部署在 GitHub 再尝试，这样会简单一些。接下来点击你的仓库。</p>
+<p><img src="https://s1.ax1x.com/2020/03/27/GiwFwd.jpg" alt="choose"></p>
+<h3 id="开始部署"><a href="#开始部署" class="headerlink" title="开始部署"></a>开始部署</h3><p>如果你的 hexo 已经部署到 GitHub Pages 的话，在这个页面什么都不用选，直接到下一步。如果你是将整个 hexo 博客都上传上来了的话，这里你需要选择 Publish directroy 为 <code>public\</code>。<br><img src="https://s1.ax1x.com/2020/03/27/Giw8kn.jpg" alt="deploy"></p>
+<h3 id="部署完成"><a href="#部署完成" class="headerlink" title="部署完成"></a>部署完成</h3><p>这时候点击 deploy site，稍作等待就能看到部署成功啦！他会跳转到新的页面，这个页面他会给你一个链接，这就是你的博客访问链接，直接复制他就可以访问。Netlify 使用的是经过钩子钩住了我们的这个分支，当有推送之类的新操作，它会自动拉取文件完成自动部署，这是他很大的一个优势。</p>
+<h3 id="添加到DNS解析"><a href="#添加到DNS解析" class="headerlink" title="添加到DNS解析"></a>添加到DNS解析</h3><p>如果你有域名的话，这时候可以将你的域名添加一条解析，也解析到他生成的网站上面，这样我认为就是做了一个DNS的负载均衡，对访问速度应该有一个较大的提升</p>
 
     </div>
 
@@ -249,7 +258,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E7%94%9F%E6%B4%BB/" rel="tag"># 生活</a>
+              <a href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag"># 博客</a>
           </div>
 
         
@@ -258,13 +267,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/03/23/%E5%9C%A8-VMware-%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E4%BD%BF%E7%94%A8-Ubuntu-18-04-%E7%B3%BB%E7%BB%9F%E7%BC%96%E8%AF%91-Linux-%E5%86%85%E6%A0%B8%E9%97%AE%E9%A2%98%E4%B8%8E%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/" rel="prev" title="在 VMware 虚拟机中使用 Ubuntu 18.04 系统编译 Linux 内核问题与方法总结">
-      <i class="fa fa-chevron-left"></i> 在 VMware 虚拟机中使用 Ubuntu 18.04 系统编译 Linux 内核问题与方法总结
+    <a href="/2020/03/26/windows-bat/" rel="prev" title="简单的批处理命令">
+      <i class="fa fa-chevron-left"></i> 简单的批处理命令
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/03/23/%E5%B0%86Windows-Terminal%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%8A%A0%E5%85%A5%E5%88%B0%E9%BC%A0%E6%A0%87%E5%8F%B3%E9%94%AE/" rel="next" title="将Windows Terminal快捷键加入到鼠标右键">
-      将Windows Terminal快捷键加入到鼠标右键 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -325,6 +331,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体操作"><span class="nav-number">2.</span> <span class="nav-text">具体操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#登录"><span class="nav-number">2.1.</span> <span class="nav-text">登录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新建"><span class="nav-number">2.2.</span> <span class="nav-text">新建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择仓库"><span class="nav-number">2.3.</span> <span class="nav-text">选择仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开始部署"><span class="nav-number">2.4.</span> <span class="nav-text">开始部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署完成"><span class="nav-number">2.5.</span> <span class="nav-text">部署完成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加到DNS解析"><span class="nav-number">2.6.</span> <span class="nav-text">添加到DNS解析</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
