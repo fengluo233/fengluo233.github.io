@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://s1.ax1x.com/2020/03/27/GiwFwd.jpg">
 <meta property="og:image" content="https://s1.ax1x.com/2020/03/27/Giw8kn.jpg">
 <meta property="article:published_time" content="2020-03-27T12:12:25.000Z">
-<meta property="article:modified_time" content="2020-03-27T13:20:39.835Z">
+<meta property="article:modified_time" content="2020-03-29T16:04:39.329Z">
 <meta property="article:author" content="fengluo">
 <meta property="article:tag" content="博客">
 <meta name="twitter:card" content="summary">
@@ -198,10 +198,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-03-27 20:12:25 / 修改时间：21:20:39" itemprop="dateCreated datePublished" datetime="2020-03-27T20:12:25+08:00">2020-03-27</time>
+              <time title="创建时间：2020-03-27 20:12:25" itemprop="dateCreated datePublished" datetime="2020-03-27T20:12:25+08:00">2020-03-27</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-30 00:04:39" itemprop="dateModified" datetime="2020-03-30T00:04:39+08:00">2020-03-30</time>
+              </span>
 
           
             <span id="/2020/03/27/deploy-on-netlify/" class="post-meta-item leancloud_visitors" data-flag-title="将 hexo 博客同时部署到 Netlify 与 GitHub Pages" title="阅读次数">
@@ -248,6 +254,7 @@
 <h3 id="开始部署"><a href="#开始部署" class="headerlink" title="开始部署"></a>开始部署</h3><p>如果你的 hexo 已经部署到 GitHub Pages 的话，在这个页面什么都不用选，直接到下一步。如果你是将整个 hexo 博客都上传上来了的话，这里你需要选择 Publish directroy 为 <code>public\</code>。<br><img src="https://s1.ax1x.com/2020/03/27/Giw8kn.jpg" alt="deploy"></p>
 <h3 id="部署完成"><a href="#部署完成" class="headerlink" title="部署完成"></a>部署完成</h3><p>这时候点击 deploy site，稍作等待就能看到部署成功啦！他会跳转到新的页面，这个页面他会给你一个链接，这就是你的博客访问链接，直接复制他就可以访问。Netlify 使用的是经过钩子钩住了我们的这个分支，当有推送之类的新操作，它会自动拉取文件完成自动部署，这是他很大的一个优势。</p>
 <h3 id="添加到DNS解析"><a href="#添加到DNS解析" class="headerlink" title="添加到DNS解析"></a>添加到DNS解析</h3><p>如果你有域名的话，这时候可以将你的域名添加一条解析，也解析到他生成的网站上面，这样我认为就是做了一个DNS的负载均衡，对访问速度应该有一个较大的提升</p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>如果你在评论类似 <code>leancloud</code> 有过安全设置，设置了域名白名单之类的，记得过去添加一下，不然会出现无法访问的情况</p>
 
     </div>
 
@@ -343,7 +350,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体操作"><span class="nav-number">2.</span> <span class="nav-text">具体操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#登录"><span class="nav-number">2.1.</span> <span class="nav-text">登录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新建"><span class="nav-number">2.2.</span> <span class="nav-text">新建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择仓库"><span class="nav-number">2.3.</span> <span class="nav-text">选择仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开始部署"><span class="nav-number">2.4.</span> <span class="nav-text">开始部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署完成"><span class="nav-number">2.5.</span> <span class="nav-text">部署完成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加到DNS解析"><span class="nav-number">2.6.</span> <span class="nav-text">添加到DNS解析</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体操作"><span class="nav-number">2.</span> <span class="nav-text">具体操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#登录"><span class="nav-number">2.1.</span> <span class="nav-text">登录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新建"><span class="nav-number">2.2.</span> <span class="nav-text">新建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择仓库"><span class="nav-number">2.3.</span> <span class="nav-text">选择仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开始部署"><span class="nav-number">2.4.</span> <span class="nav-text">开始部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署完成"><span class="nav-number">2.5.</span> <span class="nav-text">部署完成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加到DNS解析"><span class="nav-number">2.6.</span> <span class="nav-text">添加到DNS解析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意"><span class="nav-number">3.</span> <span class="nav-text">注意</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
