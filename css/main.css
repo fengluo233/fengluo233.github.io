@@ -1162,7 +1162,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #7982ff;
+  background: #b1ff18;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1303,10 +1303,9 @@ pre .javascript .function {
   line-height: 1.8;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .post-toc .nav .nav-child {
-  display: none;
+  display: block;
 }
 .post-toc .nav .active > .nav-child {
   display: block;
@@ -2416,7 +2415,7 @@ ul.breadcrumb li + li:last-child {
   padding: 0;
 }
 body {
-  background: url("https://images.unsplash.com/photo-1502154024274-8cd40923ba51?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=1600");
+  background: url("https://s1.ax1x.com/2020/03/29/GZv5TI.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
