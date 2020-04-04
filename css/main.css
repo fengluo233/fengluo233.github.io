@@ -1162,7 +1162,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ffbb17;
+  background: #4175ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2430,7 +2430,7 @@ ul.breadcrumb li + li:last-child {
   white-space: nowrap;
 }
 body {
-  background: url("https://s1.ax1x.com/2020/03/29/GZv5TI.jpg");
+  background: url("https://cdn.jsdelivr.net/gh/fengluo233/blog-imgs/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -2451,13 +2451,4 @@ body {
   border: none !important;
   transition-property: unset;
   padding: 0px 15px;
-}
-.post-button {
-  margin-top: 10px;
-}
-.posts-expand .post-meta {
-  margin: 3px 0 0 0;
-}
-.post-block.home {
-  height: 320px;
 }
