@@ -21,14 +21,19 @@
     var CONFIG = {"hostname":"haoshuang.site","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="枫落">
-<meta property="og:url" content="https://haoshuang.site/archives/index.html">
+  <meta name="description" content="前两天，经历了大概两个星期的操作系统原理课设终于结束了，爆炸肯定是有点爆炸的，这两天回过神来总结总结。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="操作系统课设总结">
+<meta property="og:url" content="https://haoshuang.site/2020/06/08/OS-Project/index.html">
 <meta property="og:site_name" content="枫落">
+<meta property="og:description" content="前两天，经历了大概两个星期的操作系统原理课设终于结束了，爆炸肯定是有点爆炸的，这两天回过神来总结总结。">
+<meta property="article:published_time" content="2020-06-08T13:39:25.000Z">
+<meta property="article:modified_time" content="2020-06-08T14:22:48.782Z">
 <meta property="article:author" content="fengluo">
+<meta property="article:tag" content="生活">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://haoshuang.site/archives/">
+<link rel="canonical" href="https://haoshuang.site/2020/06/08/OS-Project/">
 
 
 <script id="page-configurations">
@@ -36,11 +41,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false
+    isPost : true
   };
 </script>
 
-  <title>归档 | 枫落</title>
+  <title>操作系统课设总结 | 枫落</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162013751-1"></script>
     <script>
@@ -160,236 +165,144 @@
           <div class="content">
             
 
+  <div class="posts-expand">
+      
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://haoshuang.site/2020/06/08/OS-Project/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="fengluo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="枫落">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          操作系统课设总结
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-06-08 21:39:25 / 修改时间：22:22:48" itemprop="dateCreated datePublished" datetime="2020-06-08T21:39:25+08:00">2020-06-08</time>
+            </span>
+
+          
+            <span id="/2020/06/08/OS-Project/" class="post-meta-item leancloud_visitors" data-flag-title="操作系统课设总结" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 17 篇日志。 继续努力。</span>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/06/08/OS-Project/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/08/OS-Project/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <h1 class="collection-header">2020</h1>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-06-08T21:39:25+08:00"
-              content="2020-06-08">
-          06-08
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/06/08/OS-Project/" itemprop="url">
-            <span itemprop="name">操作系统课设总结</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-05-25T16:06:57+08:00"
-              content="2020-05-25">
-          05-25
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/05/25/winget/" itemprop="url">
-            <span itemprop="name">winget 使用感想</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-05-25T15:43:25+08:00"
-              content="2020-05-25">
-          05-25
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/05/25/add-book-site/" itemprop="url">
-            <span itemprop="name">增加图书下载</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-04-02T20:06:26+08:00"
-              content="2020-04-02">
-          04-02
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/04/02/clash-update/" itemprop="url">
-            <span itemprop="name">更新 clash 发现的有趣的事</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-03-31T16:19:58+08:00"
-              content="2020-03-31">
-          03-31
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/03/31/first-cooking/" itemprop="url">
-            <span itemprop="name">震惊！男子一个人在家竟然做出这种事！</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-03-29T23:44:48+08:00"
-              content="2020-03-29">
-          03-29
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/03/29/image-turn-to-green/" itemprop="url">
-            <span itemprop="name">为什么图片转发多了会变绿？</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-03-27T20:12:25+08:00"
-              content="2020-03-27">
-          03-27
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/03/27/deploy-on-netlify/" itemprop="url">
-            <span itemprop="name">将 hexo 博客同时部署到 Netlify 与 GitHub Pages</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-03-26T13:09:00+08:00"
-              content="2020-03-26">
-          03-26
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/03/26/windows-bat/" itemprop="url">
-            <span itemprop="name">简单的批处理命令</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-03-25T21:30:12+08:00"
-              content="2020-03-25">
-          03-25
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/03/25/vim/" itemprop="url">
-            <span itemprop="name">vim 记录本</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-03-25T12:49:15+08:00"
-              content="2020-03-25">
-          03-25
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/03/25/hexo-next7-xx-%E6%B7%BB%E5%8A%A0%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87/" itemprop="url">
-            <span itemprop="name">hexo next7.xx 添加背景图片</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
+        <p>前两天，经历了大概两个星期的操作系统原理课设终于结束了，爆炸肯定是有点爆炸的，这两天回过神来总结总结。</p>
+<a id="more"></a>
+<p>还是比较满意的。这次选择了 GeekOS 的任务，总体来说完成了，虽然借鉴了不少网上的内容，但至少在前几个project还是在认真的学习的<del>羞愧</del>。下面还是做些有的没的的总结。</p>
+<h2 id="使用WSL的惨痛"><a href="#使用WSL的惨痛" class="headerlink" title="使用WSL的惨痛"></a>使用WSL的惨痛</h2><p>这是十分惨痛的回忆，我因为不想装虚拟机选择了WSL来进行开发，但是在使用的时候出现了很多很多问题，我甚至在前两天一直致力于在WSL中使用Bochs，我到现在还是不知道这个愚蠢的想法是怎么产生的：WSL作为Windows的子系统，他的意义就是在命令行进行操作而不是图形界面，需要在图形界面进行的操作应该尽量放在Windows中——你在Windows中跑Linux编译出来的文件是完全可以的，而这也是被微软所鼓励的。</p>
+<p>第二个谈谈文件位置。在WSL中，Windows系统的硬盘是被挂载在mnt目录下的，这代表着你可以在Linux中很轻易的访问到他，于是我就忽略掉了这个操作，直接在Linux中尝试编译Windows目录下的文件，但是屡屡报错，一直是</p>
+<p><code>recipe for target &#39;diskc.img&#39; failed</code></p>
+<p>前一行报错为<br><code>stat: Value too large for defined data type</code></p>
+<p>这个东西我花了大量时间来解决，因为我并没有关注它提示我的状态：太大了。我一直执着于去找为什么diskc.img的生成会失败，但这个并不是那么容易解决，<del>当然因为你方向错了</del>。我四处询问，问同学问老师，同学说不会，老师在大群中说：有的问题我也没有解决办法。网上查不到答案，提问也没人理，折腾了我整整三天。</p>
+<p>在第三天的中午，我突然开始关注那些说“文件过大超过2GB”的解答，看到他们说添加一个<code>#define _FILE_OFFSET_BITS 64</code>，就可以解决。我并不知道要在哪份文件之中添加，于是尝试直接把他添加到GCC的编译参数中，然后就成功了。</p>
+<p>我非常高兴且迷惑：为什么会大于2GB？？？</p>
+<p>最后才知道，这是因为文件处于Windows下的原因。我将文件复制到Linux的目录下，不加参数一次编译成功。这给了我很大的警示：<strong>在以后的学习过程中要注意环境的问题，不能想当然，忽略到那些好像理所当然的东西</strong></p>
+<h2 id="课设时间规划"><a href="#课设时间规划" class="headerlink" title="课设时间规划"></a>课设时间规划</h2><p>现在回头看看，我的时间安排还是有很多问题的，在前两个任务耽误了大量时间，没做好安排导致后面进度极其紧张，时间什么的都不太够用，草草收尾，以后还是要注意时间的问题，尽量不要出现这种头重脚轻的情况。</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>不管怎么样课设结束了。这门课还是学了不少东西的<del>但也不多</del>。感觉这里还是挺重要的，需要花时间看些东西，目前掌握的肯定是远远不够的。最近在熊姐姐的建议下开始看6.824，确实感觉很痛苦，希望可以坚持下去</p>
+<h2 id="最后的最后"><a href="#最后的最后" class="headerlink" title="最后的最后"></a>最后的最后</h2><p>终于凉快下来了最近天天天天大太阳简直要杀人</p>
 
     </div>
+
+    
+    
+    
+
+    <div>
+    
+      <div>
+      
+          <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+      
+</div>
+    
   </div>
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%94%9F%E6%B4%BB/" rel="tag"># 生活</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/05/25/winget/" rel="prev" title="winget 使用感想">
+      <i class="fa fa-chevron-left"></i> winget 使用感想
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
   
   
   
 
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
-
+  </div>
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -436,6 +349,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用WSL的惨痛"><span class="nav-number">1.</span> <span class="nav-text">使用WSL的惨痛</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#课设时间规划"><span class="nav-number">2.</span> <span class="nav-text">课设时间规划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最后"><span class="nav-number">3.</span> <span class="nav-text">最后</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最后的最后"><span class="nav-number">4.</span> <span class="nav-text">最后的最后</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
