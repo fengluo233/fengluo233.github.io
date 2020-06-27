@@ -21,19 +21,21 @@
     var CONFIG = {"hostname":"haoshuang.site","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="前两天，经历了大概两个星期的操作系统原理课设终于结束了，爆炸肯定是有点爆炸的，这两天回过神来总结总结。">
+  <meta name="description" content="这两天在尝试使用 GitHub Actions 自动将同学们合并的代码部署到 GitHub Pages 上，踩了不少坑，分享一下。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="操作系统课设总结">
-<meta property="og:url" content="https://haoshuang.site/2020/06/08/OS-Project/index.html">
+<meta property="og:title" content="use github actions deploy vue project">
+<meta property="og:url" content="https://haoshuang.site/2020/06/28/use-github-actions-deploy-vue-project/index.html">
 <meta property="og:site_name" content="枫落">
-<meta property="og:description" content="前两天，经历了大概两个星期的操作系统原理课设终于结束了，爆炸肯定是有点爆炸的，这两天回过神来总结总结。">
-<meta property="article:published_time" content="2020-06-08T13:39:25.000Z">
-<meta property="article:modified_time" content="2020-06-08T14:22:48.782Z">
+<meta property="og:description" content="这两天在尝试使用 GitHub Actions 自动将同学们合并的代码部署到 GitHub Pages 上，踩了不少坑，分享一下。">
+<meta property="article:published_time" content="2020-06-27T18:17:29.000Z">
+<meta property="article:modified_time" content="2020-06-27T19:07:48.506Z">
 <meta property="article:author" content="fengluo">
-<meta property="article:tag" content="生活">
+<meta property="article:tag" content="折腾">
+<meta property="article:tag" content="GitHub">
+<meta property="article:tag" content="vue">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://haoshuang.site/2020/06/08/OS-Project/">
+<link rel="canonical" href="https://haoshuang.site/2020/06/28/use-github-actions-deploy-vue-project/">
 
 
 <script id="page-configurations">
@@ -45,7 +47,7 @@
   };
 </script>
 
-  <title>操作系统课设总结 | 枫落</title>
+  <title>use github actions deploy vue project | 枫落</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162013751-1"></script>
     <script>
@@ -170,7 +172,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="https://haoshuang.site/2020/06/08/OS-Project/">
+    <link itemprop="mainEntityOfPage" href="https://haoshuang.site/2020/06/28/use-github-actions-deploy-vue-project/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -183,7 +185,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          操作系统课设总结
+          use github actions deploy vue project
         </h1>
 
         <div class="post-meta">
@@ -194,11 +196,11 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-06-08 21:39:25 / 修改时间：22:22:48" itemprop="dateCreated datePublished" datetime="2020-06-08T21:39:25+08:00">2020-06-08</time>
+              <time title="创建时间：2020-06-28 02:17:29 / 修改时间：03:07:48" itemprop="dateCreated datePublished" datetime="2020-06-28T02:17:29+08:00">2020-06-28</time>
             </span>
 
           
-            <span id="/2020/06/08/OS-Project/" class="post-meta-item leancloud_visitors" data-flag-title="操作系统课设总结" title="阅读次数">
+            <span id="/2020/06/28/use-github-actions-deploy-vue-project/" class="post-meta-item leancloud_visitors" data-flag-title="use github actions deploy vue project" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -213,8 +215,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/06/08/OS-Project/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/08/OS-Project/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/06/28/use-github-actions-deploy-vue-project/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/28/use-github-actions-deploy-vue-project/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -224,7 +226,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.2k</span>
+              <span>1.1k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -243,20 +245,38 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>前两天，经历了大概两个星期的操作系统原理课设终于结束了，爆炸肯定是有点爆炸的，这两天回过神来总结总结。</p>
+        <p>这两天在尝试使用 GitHub Actions 自动将同学们合并的代码部署到 GitHub Pages 上，踩了不少坑，分享一下。</p>
 <a id="more"></a>
-<p>还是比较满意的。这次选择了 GeekOS 的任务，总体来说完成了，虽然借鉴了不少网上的内容，但至少在前几个project还是在认真的学习的<del>羞愧</del>。下面还是做些有的没的的总结。</p>
-<h2 id="使用WSL的惨痛"><a href="#使用WSL的惨痛" class="headerlink" title="使用WSL的惨痛"></a>使用WSL的惨痛</h2><p>这是十分惨痛的回忆，我因为不想装虚拟机选择了WSL来进行开发，但是在使用的时候出现了很多很多问题，我甚至在前两天一直致力于在WSL中使用Bochs，我到现在还是不知道这个愚蠢的想法是怎么产生的：WSL作为Windows的子系统，他的意义就是在命令行进行操作而不是图形界面，需要在图形界面进行的操作应该尽量放在Windows中——你在Windows中跑Linux编译出来的文件是完全可以的，而这也是被微软所鼓励的。</p>
-<p>第二个谈谈文件位置。在WSL中，Windows系统的硬盘是被挂载在mnt目录下的，这代表着你可以在Linux中很轻易的访问到他，于是我就忽略掉了这个操作，直接在Linux中尝试编译Windows目录下的文件，但是屡屡报错，一直是</p>
-<p><code>recipe for target &#39;diskc.img&#39; failed</code></p>
-<p>前一行报错为<br><code>stat: Value too large for defined data type</code></p>
-<p>这个东西我花了大量时间来解决，因为我并没有关注它提示我的状态：太大了。我一直执着于去找为什么diskc.img的生成会失败，但这个并不是那么容易解决，<del>当然因为你方向错了</del>。我四处询问，问同学问老师，同学说不会，老师在大群中说：有的问题我也没有解决办法。网上查不到答案，提问也没人理，折腾了我整整三天。</p>
-<p>在第三天的中午，我突然开始关注那些说“文件过大超过2GB”的解答，看到他们说添加一个<code>#define _FILE_OFFSET_BITS 64</code>，就可以解决。我并不知道要在哪份文件之中添加，于是尝试直接把他添加到GCC的编译参数中，然后就成功了。</p>
-<p>我非常高兴且迷惑：为什么会大于2GB？？？</p>
-<p>最后才知道，这是因为文件处于Windows下的原因。我将文件复制到Linux的目录下，不加参数一次编译成功。这给了我很大的警示：<strong>在以后的学习过程中要注意环境的问题，不能想当然，忽略到那些好像理所当然的东西</strong></p>
-<h2 id="课设时间规划"><a href="#课设时间规划" class="headerlink" title="课设时间规划"></a>课设时间规划</h2><p>现在回头看看，我的时间安排还是有很多问题的，在前两个任务耽误了大量时间，没做好安排导致后面进度极其紧张，时间什么的都不太够用，草草收尾，以后还是要注意时间的问题，尽量不要出现这种头重脚轻的情况。</p>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>不管怎么样课设结束了。这门课还是学了不少东西的<del>但也不多</del>。感觉这里还是挺重要的，需要花时间看些东西，目前掌握的肯定是远远不够的。最近在熊姐姐的建议下开始看6.824，确实感觉很痛苦，希望可以坚持下去</p>
-<h2 id="最后的最后"><a href="#最后的最后" class="headerlink" title="最后的最后"></a>最后的最后</h2><p>终于凉快下来了最近天天天天大太阳简直要杀人</p>
+<h1 id="什么是-GitHub-Actions"><a href="#什么是-GitHub-Actions" class="headerlink" title="什么是 GitHub Actions"></a>什么是 GitHub Actions</h1><p>这是GitHub正式推出不到一年的新功能，用于持续集成（CI）。例如运行测试，部署到服务器中等操作。这是一个你可以完全自定义，也可以借助前人的成果的工作流程。</p>
+<h1 id="关于使用"><a href="#关于使用" class="headerlink" title="关于使用"></a>关于使用</h1><p>具体的使用方法可以点击<a href="https://help.github.com/cn/actions/reference/workflow-syntax-for-github-actions" target="_blank" rel="noopener">这里</a>查看GitHub的官方文档，清晰明了也简单。我的测试项目放在我的<a href="https://github.com/fengluo233/vue-actions-deploy" target="_blank" rel="noopener">GitHub仓库</a>中。这里简单介绍几个参数：</p>
+<h2 id="name"><a href="#name" class="headerlink" title="name"></a>name</h2><p>GitHub Actions 的配置文件叫做 workflow 文件，存放在代码仓库的.github/workflows目录。name就是workflow的名称，如果不配置就默认文件名</p>
+<h2 id="on"><a href="#on" class="headerlink" title="on"></a>on</h2><p>这里指定触发workflow的条件，pull request，push之类，如果有多个的话使用[ ]括起来。不只有代码库中会发生的事，甚至可以有外部事件，还可以有定时运行，具体见<a href="https://help.github.com/en/actions/reference/events-that-trigger-workflows" target="_blank" rel="noopener">文档</a></p>
+<h2 id="jobs-name"><a href="#jobs-name" class="headerlink" title="jobs..name"></a>jobs.<job_id>.name</h2><p>这是主体，表示要执行的一项或多项任务。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">jobs</span><br><span class="line">    firstJob:</span><br><span class="line">        name:first job</span><br><span class="line">    secondJob:</span><br><span class="line">        name:second job</span><br></pre></td></tr></table></figure>
+<p>这里的name是任务的说明，会在actions的详情中显示。你还可以使用needs参数来指定依赖关系，例如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">jobs:</span><br><span class="line">  job1:</span><br><span class="line">  job2:</span><br><span class="line">    needs: job1</span><br><span class="line">  job3:</span><br><span class="line">    needs: [job1, job2]</span><br></pre></td></tr></table></figure>
+<p>在这里，job2必须等待job1完成，job3需要等待其他两个都完成。</p>
+<h2 id="jobs-runs-on"><a href="#jobs-runs-on" class="headerlink" title="jobs..runs-on"></a>jobs.<job_id>.runs-on</h2><p>runs-on参数运行需要的虚拟机环境，目前有三个可用：</p>
+<ul>
+<li>ubuntu-latest</li>
+<li>windows-latest</li>
+<li>macOS-latest</li>
+</ul>
+<p>在设置的时候一定要注意自己引用的actions有没有规定的环境。</p>
+<h2 id="jobs-steps"><a href="#jobs-steps" class="headerlink" title="jobs..steps"></a>jobs.<job_id>.steps</h2><p>steps字段指定的是运行步骤，可以有多个。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">jobs.&lt;job_id&gt;.steps.name：步骤名称</span><br><span class="line">jobs.&lt;job_id&gt;.steps.run：该步骤运行的命令或者引用的action</span><br><span class="line">jobs.&lt;job_id&gt;.steps.env：该步骤所需的环境变量</span><br></pre></td></tr></table></figure>
+
+<p>上面就是简单的参数，如果想要详细了解还是要看官方给的文档。</p>
+<h1 id="踩坑"><a href="#踩坑" class="headerlink" title="踩坑"></a>踩坑</h1><ul>
+<li><p>大部分脚本需要你生成一个token来进行验证，这里建议<strong>将token加入到仓库的secrets中</strong>再进行调用，能很好的避免产生安全性问题。这也是官方文档所建议的。</p>
+</li>
+<li><p>对同样想这么做的人说：<strong>在merge之前想进行打包发布是不现实的</strong>。你只能在merge之后才能进行打包发布，所以我建议将actions的对象设置为push即可，因为pull request 是永远会失败的。</p>
+</li>
+<li><p>善于利用轮子，<a href="https://github.com/marketplace?type=actions" target="_blank" rel="noopener">官方市场</a>有不少好用的轮子可以拿来借用。</p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>这次使用actions给我的感觉是十分震撼的。以前一直只是听说过。是从winget的提交软件包的流程才第一次接触到他，算是很晚的了。当时由于格式错误提交了好多遍，也点进去看了详细情况，感觉十分神奇。这次体验之后算是揭开了一点神秘面纱，大致对他有了了解。</p>
+</li>
+</ul>
+<p>工作流程在变得越来越简便，借助前人的成果，现在只需要短短的十几行代码就能做到自动部署一个项目，令人震惊的现在的开发流程已经能够如此的舒适，令人着迷。</p>
 
     </div>
 
@@ -276,7 +296,9 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E7%94%9F%E6%B4%BB/" rel="tag"># 生活</a>
+              <a href="/tags/%E6%8A%98%E8%85%BE/" rel="tag"># 折腾</a>
+              <a href="/tags/GitHub/" rel="tag"># GitHub</a>
+              <a href="/tags/vue/" rel="tag"># vue</a>
           </div>
 
         
@@ -285,13 +307,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/05/25/winget/" rel="prev" title="winget 使用感想">
-      <i class="fa fa-chevron-left"></i> winget 使用感想
+    <a href="/2020/06/08/OS-Project/" rel="prev" title="操作系统课设总结">
+      <i class="fa fa-chevron-left"></i> 操作系统课设总结
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/06/28/use-github-actions-deploy-vue-project/" rel="next" title="use github actions deploy vue project">
-      use github actions deploy vue project <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -352,7 +371,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用WSL的惨痛"><span class="nav-number">1.</span> <span class="nav-text">使用WSL的惨痛</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#课设时间规划"><span class="nav-number">2.</span> <span class="nav-text">课设时间规划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最后"><span class="nav-number">3.</span> <span class="nav-text">最后</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最后的最后"><span class="nav-number">4.</span> <span class="nav-text">最后的最后</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是-GitHub-Actions"><span class="nav-number">1.</span> <span class="nav-text">什么是 GitHub Actions</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于使用"><span class="nav-number">2.</span> <span class="nav-text">关于使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#name"><span class="nav-number">2.1.</span> <span class="nav-text">name</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#on"><span class="nav-number">2.2.</span> <span class="nav-text">on</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jobs-name"><span class="nav-number">2.3.</span> <span class="nav-text">jobs..name</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jobs-runs-on"><span class="nav-number">2.4.</span> <span class="nav-text">jobs..runs-on</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jobs-steps"><span class="nav-number">2.5.</span> <span class="nav-text">jobs..steps</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#踩坑"><span class="nav-number">3.</span> <span class="nav-text">踩坑</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最后"><span class="nav-number">4.</span> <span class="nav-text">最后</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
