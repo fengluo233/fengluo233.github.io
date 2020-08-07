@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://haoshuang.site/2020/08/08/design/</loc>
+    
+    <lastmod>2020-08-07T17:32:54.438Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://haoshuang.site/2020/06/28/use-github-actions-deploy-vue-project/</loc>
     
-    <lastmod>2020-06-27T19:12:40.697Z</lastmod>
+    <lastmod>2020-06-28T01:53:51.629Z</lastmod>
     
   </url>
   
